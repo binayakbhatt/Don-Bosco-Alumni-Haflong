@@ -50,6 +50,25 @@
 
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
+                <!-- Batch-->
+                <div class="mt-4">
+                    <x-input-label for="batch" :value="__('Batch')" />
+
+                    <x-text-input id="batch" class="block mt-1 w-full" type="text" name="batch"
+                        :value="old('batch')" required />
+
+                    <x-input-error :messages="$errors->get('batch')" class="mt-2" />
+                </div>
+                <!-- City-->
+                <div class="mt-4">
+                    <x-input-label for="city" :value="__('City')" />
+
+                    <x-text-input id="city" class="block mt-1 w-full" type="text" name="city"
+                        :value="old('city')" required />
+
+                    <x-input-error :messages="$errors->get('city')" class="mt-2" />
+                </div>
+
                 <!--Passphrase-->
                 <div class="mt-4">
                     <x-input-label for="passphrase" :value="__('Passphrase')" />

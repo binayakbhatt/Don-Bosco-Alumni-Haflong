@@ -25,7 +25,17 @@ class User extends Authenticatable
         'password',
         'passphrase',
         'role',
-        'profile_picture'
+        'profile_picture',
+        'batch',
+        'dob',
+        'phone',
+        'occupation',
+        'city',
+        'state',
+        'country',
+        'pin_code',
+        'aboutme',
+
     ];
 
     /**
@@ -45,6 +55,7 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
+        'dob'=>'date',
         'email_verified_at' => 'datetime',
         'passphrase' => 'encrypted'
     ];
