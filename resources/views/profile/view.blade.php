@@ -120,7 +120,7 @@
 
                         <span class="tracking-wide text-white">General Information</span>
                     </div>
-                    <div class="text-white">
+                    <div class="text-white pt-2 my-4">
                         <div class="grid md:grid-cols-3 text-sm">
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">First Name</div>
