@@ -20,7 +20,7 @@
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gradient-to-r from-green-200 via-green-300 to-blue-500">
         @include('layouts.site-nav')
-      
+
 
         <!-- Page Heading -->
         @if (isset($header))

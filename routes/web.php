@@ -19,7 +19,7 @@ use App\Http\Controllers\Profile\Back\ProfileController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front.landing');
 })->name('landing');
 
 Route::get('/dashboard', function () {

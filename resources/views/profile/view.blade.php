@@ -6,7 +6,7 @@
                 <div class="flex items-center justify-center">
                     <x-success-message />
                 </div>
-                <div class="flex  items-center justify-center mx-auto space-x-3 py-4">
+                <div class="flex  items-center justify-center mx-auto space-x-2 py-4">
                     @if (auth()->user()->profile_picture)
                         <div class="image overflow-hidden">
                             <img class=" h-56 w-56 mx-auto rounded-full"
