@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="py-12">
-        <div class="flex flex-wrap overflow-hidden xl:-mx-2  p-4">
+        <div class="flex flex-wrap overflow-hidden xl:-mx-2  px-4 pt-12 pb-4">
 
             <div class="w-full overflow-hidden xl:my-2 xl:px-2 ">
                 <div class="flex items-center justify-center">

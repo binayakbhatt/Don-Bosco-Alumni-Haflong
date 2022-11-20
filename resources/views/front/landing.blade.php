@@ -4,9 +4,9 @@
 
 
         <div
-            class="container py-12 px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center text-white leading-normal tracking-normal">
+            class="container py-16 px-3 mx-auto flex flex-wrap flex-col-1 md:flex-row items-center text-white leading-normal tracking-normal">
             <!--Left Col-->
-            <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+            <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left py-16">
                 <p class="uppercase tracking-loose w-full"> Don Bosco School Haflong</p>
                 <h1 class="my-4 text-5xl font-bold leading-tight">
                     Alumni Association
