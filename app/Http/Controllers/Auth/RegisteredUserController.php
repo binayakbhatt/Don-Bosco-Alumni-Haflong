@@ -42,7 +42,7 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()->mixedCase()->symbols()],
             'passphrase' => ['required', 'string'],
             'city'=>['required','string','max:50'],
-            'batch'=>['required','string','max:50'],
+            'batch'=>['required','numeric',],
         ]);
 
         $user = User::create([

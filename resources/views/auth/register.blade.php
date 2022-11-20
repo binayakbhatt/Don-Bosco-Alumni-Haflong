@@ -54,7 +54,7 @@
                 <div class="mt-4">
                     <x-input-label for="batch" :value="__('Batch')" />
 
-                    <x-text-input id="batch" class="block mt-1 w-full" type="text" name="batch"
+                    <x-text-input id="batch" class="block mt-1 w-full" type="number" name="batch"
                         :value="old('batch')" required />
 
                     <x-input-error :messages="$errors->get('batch')" class="mt-2" />

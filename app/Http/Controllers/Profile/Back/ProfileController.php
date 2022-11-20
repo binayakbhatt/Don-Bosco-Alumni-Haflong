@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Illuminate\Support\Str;
 
 class ProfileController extends Controller
 {
@@ -26,13 +27,28 @@ class ProfileController extends Controller
           $request->validate([
             'first_name' =>'required|string',
             'last_name' =>'required|string',
+            'dob'=> 'date|nullable',
+            'phone'=>'numeric|nullable',
+            'pin_code'=>'numeric|nullable',
+            'city'=>'required|string',
+            'country'=>'string|nullable',
+            'state' =>'string|nullable',
+            'occupation'=>'string|nullable',
         ]);
 
         
         $updated = auth()->user()->update([
-            'first_name' =>$request->first_name,
-            'middle_name'  =>$request->middle_name,
-            'last_name' =>$request->last_name
+            'first_name' =>Str::ucfirst($request->first_name) ,
+            'middle_name'  =>Str::ucfirst($request->middle_name),
+            'last_name' =>Str::ucfirst($request->last_name),
+            'phone'=> $request->phone,
+            'dob'=>$request->dob,
+            'occupation'=> Str::ucfirst($request->occupation),
+            'city'=> Str::ucfirst($request->city),
+            'state'=> Str::ucfirst($request->state),
+            'country'=> Str::ucfirst($request->country),
+            'pin_code'=> $request->pin_code,
+            'aboutme'=> $request->aboutme,
         ]);
      
         return redirect()->route('profile.view')->with('success', 'Profile updated successfully');
