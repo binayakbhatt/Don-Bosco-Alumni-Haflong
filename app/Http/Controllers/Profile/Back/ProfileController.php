@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\Support\Str;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class ProfileController extends Controller
 {
@@ -125,16 +126,16 @@ class ProfileController extends Controller
 
             unlink(public_path('images/profile/'.auth()->user()->profile_picture));
         }
-
-            $extension = $request->file('profile_picture')->extension();
+            $image = $request->file('profile_picture');
+            $extension = $image->extension();
             $profile_picture_name = date('dmYHis').'.'.$extension;
-            $request->file('profile_picture')->move(public_path('images/profile/'),$profile_picture_name);
-            $request->profile_picture = $profile_picture_name;
+            $resize= Image::make($image)->resize(224,224)->save('images/profile/'.$profile_picture_name);
+            
         }
     
    
         $updated= auth()->user()->update([
-            'profile_picture' => $request->profile_picture,
+            'profile_picture' => $profile_picture_name,
         ]);
 
        return redirect()->route('profile.view')->with('success', 'Profile Picture changed successfully');

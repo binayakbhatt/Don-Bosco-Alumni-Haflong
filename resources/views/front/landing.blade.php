@@ -7,13 +7,17 @@
             class="container py-16 px-3 mx-auto flex flex-wrap flex-col-1 md:flex-row items-center text-white leading-normal tracking-normal">
             <!--Left Col-->
             <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left py-16">
-                <p class="uppercase tracking-loose w-full"> Don Bosco School Haflong</p>
-                <h1 class="my-4 text-5xl font-bold leading-tight">
+                <p class="mx-3 my-2 text-4xl font-bold leading-tight w-full"> Don Bosco School Haflong</p>
+                <h1 class="mx-3 my-2 text-3xl font-bold leading-tight w-full">
                     Alumni Association
                 </h1>
-                <p class="leading-normal text-2xl mb-8">
+                <p class="mx-3 my-2 leading-normal text-xl mb-8">
                     A platform to connect all Alumni of Don Bosco High School, Haflong
                 </p>
+                <a class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none"
+                    href="">
+                    Know more
+                </a>
             </div>
             <!--Right Col-->
             <div class="w-full md:w-3/5 py-6 text-center">

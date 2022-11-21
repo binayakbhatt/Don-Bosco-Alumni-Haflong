@@ -21,7 +21,7 @@
         :class="{ 'h-16': !scrolledFromTop, 'h-14': scrolledFromTop }">
         <a href="/">
             <img src="{{ asset('images/misc/logo.png') }}" alt="Logo"
-                class="h-12 transform origin-left transition duration-200"
+                class="h-12 transform origin-left transition duration-200 py-2"
                 :class="{ 'scale-100': !scrolledFromTop, 'scale-75': scrolledFromTop }" />
         </a>
         <nav>
