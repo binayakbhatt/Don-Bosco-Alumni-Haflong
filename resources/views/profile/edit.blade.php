@@ -138,11 +138,6 @@
                                 Profile</button>
                         </div>
                     </form>
-                </div>
-            </div>
-            <!--Change Profile Picture-->
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mt-6">
-                <div class="p-6 bg-white border-b border-gray-200">
                     <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Change Profile Picture
                     </h3>
 
@@ -172,29 +167,8 @@
                     </x-form>
                 </div>
             </div>
-            {{-- <!--Remove Profile Picture-->
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mt-6">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Remove Profile Picture
-                    </h3>
 
-                    <x-form action="{{ route('remove-pic') }}" method="PUT" has-files>
-                        @method('PUT')
-                        @csrf
 
-                        <input type="hidden" name="profile_picture" value="" />
-                        <div class="flex items-center justify-center">
-                            <button type="submit"
-                                class=" text-white bg-blue-700 hover:bg-blue-800 
-                                    focus:ring-4 focus:outline-none focus:ring-blue-300 
-                                    font-medium rounded-lg text-sm px-5 py-2.5 text-center
-                                     dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Remove
-                                Profile Picture</button>
-                        </div>
-                    </x-form>
-                </div>
-            </div> --}}
         </div>
     </div>
 

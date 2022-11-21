@@ -120,6 +120,12 @@ class ProfileController extends Controller
 
 
         if($request->hasFile('profile_picture')){
+            
+            if(file_exists(public_path('images/profile/'.auth()->user()->profile_picture)) AND !empty(auth()->user()->profile_picture)){
+
+            unlink(public_path('images/profile/'.auth()->user()->profile_picture));
+        }
+
             $extension = $request->file('profile_picture')->extension();
             $profile_picture_name = date('dmYHis').'.'.$extension;
             $request->file('profile_picture')->move(public_path('images/profile/'),$profile_picture_name);
