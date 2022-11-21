@@ -164,10 +164,10 @@
                                 Change
                                 Profile Picture</button>
                         </div>
+
                     </x-form>
                 </div>
             </div>
-
 
         </div>
     </div>
