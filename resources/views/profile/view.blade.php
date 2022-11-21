@@ -9,7 +9,7 @@
                 <div class="flex  items-center justify-center mx-auto space-x-2 py-4">
                     @if (auth()->user()->profile_picture)
                         <div class="image overflow-hidden">
-                            <img class=" h-56 w-56 mx-auto rounded-xl shadow-xl border-4 border-orange-500"
+                            <img class=" h-56 w-56 mx-auto rounded-xl shadow-xl border-4 border-orange-400"
                                 src="{{ asset('images/profile/' . auth()->user()->profile_picture) }}">
                         </div>
                     @else
