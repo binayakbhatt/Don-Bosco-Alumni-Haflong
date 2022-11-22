@@ -65,7 +65,7 @@
                     <a href="" @click="navOpen = false">Blog</a>
                 </li>
                 <li class="flex items-center hover:text-blue-700">
-                    <a href="" @click="navOpen = false">Alumni</a>
+                    <a href="{{ route('alumni') }}" @click="navOpen = false">Alumni</a>
                 </li>
                 <li class="flex items-center hover:text-blue-700">
                     <a href="" @click="navOpen = false">Contact</a>

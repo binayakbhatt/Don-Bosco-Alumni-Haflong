@@ -1,6 +1,6 @@
 <x-front-layout>
 
-    <div class="text-white bg-gradient-to-t from-pink-500 via-red-500 to-blue-500">
+    <div class=" bg-gradient-to-t from-pink-500 via-red-500 to-blue-500">
 
 
         <div

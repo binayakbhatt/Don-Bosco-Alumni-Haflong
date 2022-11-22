@@ -9,8 +9,16 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-   public function Alumni (){
-       $alumni = User::where('role', '=' , 'User')->orderBy('batch')->paginate(10);
-           
+   public function alumni (){
+       
+    $alumni = User::where('role', '=' , 'User')->orderBy('batch')->paginate(10);
+    return view('front.alumni', compact('alumni'));     
+    
+    }
+
+    public function alumni_detail($id){
+
+        $alumni_detail = User::where('id', $id)->first();
+        return view ('front.alumni-detail', compact('alumni_detail'));
     }
 }
