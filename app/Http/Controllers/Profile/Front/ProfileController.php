@@ -9,5 +9,8 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-   //
+   public function Alumni (){
+       $alumni = User::where('role', '=' , 'User')->orderBy('batch')->paginate(10);
+           
+    }
 }
