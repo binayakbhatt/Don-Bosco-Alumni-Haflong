@@ -45,12 +45,14 @@
 
             <div class="w-full overflow-hidden xl:my-2 xl:px-2 ">
                 <div class=" md:flex md:items-center md:justify-center md:space-x-3">
-                    <div class=" mt-4 flex items-center justify-center">
-                        <a class="block text-white bg-gradient-to-b from-blue-700 via-blue-800 to-gray-900 hover:bg-gradient-to-t from-blue-700 via-blue-800 to-gray-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            type="button" href="{{ route('profile.edit') }}">
-                            Edit Profile
-                        </a>
-                    </div>
+                    @if (auth()->user()->role !== 'Administrator')
+                        <div class=" mt-4 flex items-center justify-center">
+                            <a class="block text-white bg-gradient-to-b from-blue-700 via-blue-800 to-gray-900 hover:bg-gradient-to-t from-blue-700 via-blue-800 to-gray-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                type="button" href="{{ route('profile.edit') }}">
+                                Edit Profile
+                            </a>
+                        </div>
+                    @endif
                     <div class=" mt-4 flex items-center justify-center">
                         <a class="block text-white bg-gradient-to-b from-blue-700 via-blue-800 to-gray-900 hover:bg-gradient-to-t from-blue-700 via-blue-800 to-gray-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                             type="button" href="{{ route('edit.password') }}">
@@ -63,19 +65,7 @@
                             Change Passphrase
                         </a>
                     </div>
-                    @if (auth()->user()->profile_picture == null)
-                        <div class=" mt-4 flex items-center justify-center">
-                            <div class="flex items-center justify-center">
-                                <button type="submit" disabled
-                                    class=" text-white bg-blue-700 hover:bg-blue-800  cursor-no-drop
-                                    focus:ring-4 focus:outline-none focus:ring-blue-300 
-                                    font-medium rounded-lg text-sm px-5 py-2.5 text-center
-                                     dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Remove
-                                    Profile Picture</button>
-                            </div>
-                        </div>
-                    @else
+                    @if (auth()->user()->profile_picture !== null)
                         <div class=" mt-4 flex items-center justify-center">
                             <x-form action="{{ route('remove-pic') }}" method="PUT" has-files>
                                 @method('PUT')
@@ -173,8 +163,7 @@
                 <div
                     class="px-10 py-6 rounded-xl bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 md:col-span-2 shadow-lg">
                     <div class="flex items-center space-x-2 font-semibold text-white leading-8 mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                             <path fill-rule="evenodd"
                                 d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
                                 clip-rule="evenodd" fill="white" />

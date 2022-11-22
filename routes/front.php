@@ -12,3 +12,6 @@ Route::get('/', function () {
 Route::get('/alumni',[ProfileController::class, 'alumni'] )->name('alumni');
 Route::get('/alumni-detail/{id}',[ProfileController::class,'alumni_detail'])->name('alumni-detail');
 
+//search
+Route::get('/search',[ProfileController::class,'searchByBatch'])->name('alumni-search');
+Route::get('/search',[ProfileController::class,'searchByBatch'])->name('alumni-search');
