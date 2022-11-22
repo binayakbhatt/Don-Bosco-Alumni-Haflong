@@ -4,7 +4,8 @@ use App\Http\Controllers\Profile\Back\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware'=>['auth','verified']], function(){
-   //profile
+   
+  //profile
   Route::get('/profile',[ProfileController::class, 'viewProfile'] )->name('profile.view');
   Route::get('/profile/edit',[ProfileController::class, 'editProfile'] )->name('profile.edit');
   Route::put('/profile/update',[ProfileController::class, 'updateProfile'] )->name('profile.update');

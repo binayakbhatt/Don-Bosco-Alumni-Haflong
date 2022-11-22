@@ -24,6 +24,8 @@ return new class extends Migration
             $table->string('city');
             $table->text('passphrase');
             $table->string('password');
+            $table->string('blood_group');
+            $table->boolean('blood_donor')->default(false);
             $table->string('profile_picture')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->date('dob')->nullable();

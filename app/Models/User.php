@@ -35,6 +35,8 @@ class User extends Authenticatable
         'country',
         'pin_code',
         'aboutme',
+        'blood_group',
+        'blood_donor',
 
     ];
 
@@ -57,6 +59,7 @@ class User extends Authenticatable
     protected $casts = [
         'dob'=>'date',
         'email_verified_at' => 'datetime',
-        'passphrase' => 'encrypted'
+        'passphrase' => 'encrypted',
+        'blood_donor' => 'boolean',
     ];
 }

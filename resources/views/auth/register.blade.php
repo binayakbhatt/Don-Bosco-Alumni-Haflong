@@ -13,6 +13,7 @@
                 showPassphrase: false,
                 confirmPassword: false
             }">
+
                 <!-- First Name -->
                 <div class="mt-4">
                     <x-input-label for="first_name" :value="__('First Name')" />
@@ -68,6 +69,15 @@
 
                     <x-input-error :messages="$errors->get('city')" class="mt-2" />
                 </div>
+                <!-- Blood Group-->
+                <div class="mt-4">
+                    <x-input-label for="blood_group" :value="__('Blood Group')" />
+
+                    <x-text-input id="blood_group" class="block mt-1 w-full" type="text" name="blood_group"
+                        :value="old('blood_group')" required />
+
+                    <x-input-error :messages="$errors->get('blood_group')" class="mt-2" />
+                </div>
 
                 <!--Passphrase-->
                 <div class="mt-4">
@@ -83,7 +93,8 @@
                             <i class="fa" :class="showPassphrase ? '-solid fa-eye' : '-solid fa-eye-slash'"></i>
                         </div>
                     </div>
-                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="passphrase_help">Please Note down your
+                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="passphrase_help">Please Note down
+                        your
                         passphrase in a secure location.</p>
                     <x-input-error :messages="$errors->get('passphrase')" class="mt-2" />
                 </div>
@@ -135,6 +146,7 @@
                         {{ __('Register') }}
                     </x-primary-button>
                 </div>
+
             </div>
         </form>
     </x-auth-card>

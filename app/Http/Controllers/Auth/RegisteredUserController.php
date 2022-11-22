@@ -42,7 +42,8 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()->mixedCase()->symbols()],
             'passphrase' => ['required', 'string'],
             'city'=>['required','string','max:50'],
-            'batch'=>['required','numeric',],
+            'batch'=>['required','numeric'],
+            'blood_group'=>['required','string' ],
         ]);
 
         $user = User::create([
@@ -55,6 +56,7 @@ class RegisteredUserController extends Controller
             'role'=>'User',
             'city' => $request->city,
             'batch' =>$request->batch,
+            'blood_group'=>$request->blood_group,
         ]);
 
         event(new Registered($user));

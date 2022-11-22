@@ -16,15 +16,10 @@ use App\Http\Controllers\Profile\Back\ProfileController;
 
 
 
-
-
-Route::get('/', function () {
-    return view('front.landing');
-})->name('landing');
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified','admin'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 require __DIR__.'/profile.php';
+require __DIR__.'/front.php';

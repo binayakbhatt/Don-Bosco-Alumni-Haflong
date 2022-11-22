@@ -24,6 +24,7 @@ class ProfileController extends Controller
     }
 
     public function updateProfile(Request $request){
+      //  dd( $request->boolean('blood_donor'));
 
           $request->validate([
             'first_name' =>'required|string',
@@ -35,9 +36,16 @@ class ProfileController extends Controller
             'country'=>'string|nullable',
             'state' =>'string|nullable',
             'occupation'=>'string|nullable',
+            'blood_group'=>'required|string',
+            'blood_donor' =>'boolean',
         ]);
 
-        
+        $blood_donor= $request->boolean('blood_donor');
+
+        if($blood_donor && $request->phone == Null){
+            return redirect()->route('profile.edit')->with('failure', 'Mobile no. is mandatory for blood donor');
+        }
+
         $updated = auth()->user()->update([
             'first_name' =>Str::ucfirst($request->first_name) ,
             'middle_name'  =>Str::ucfirst($request->middle_name),
@@ -50,6 +58,8 @@ class ProfileController extends Controller
             'country'=> Str::ucfirst($request->country),
             'pin_code'=> $request->pin_code,
             'aboutme'=> $request->aboutme,
+            'blood_group'=>Str::upper($request->blood_group),
+            'blood_donor'=>$blood_donor,
         ]);
      
         return redirect()->route('profile.view')->with('success', 'Profile updated successfully');
