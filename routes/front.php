@@ -14,4 +14,3 @@ Route::get('/alumni-detail/{id}',[ProfileController::class,'alumni_detail'])->na
 
 //search
 Route::get('/search',[ProfileController::class,'searchByBatch'])->name('alumni-search');
-Route::get('/search',[ProfileController::class,'searchByBatch'])->name('alumni-search');

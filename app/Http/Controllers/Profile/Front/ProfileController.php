@@ -23,20 +23,12 @@ class ProfileController extends Controller
     }
 
     public function searchBybatch(Request $request){
-
     
-    //    $validated= $request->validate([
-    //         'search' =>'numeric'
-    //    ]);
-
         $search = $request->input('search');
-        
-        $alumni= User::query()->where('first_name', 'LIKE', "%{$search}%" )
-                            ->orWhere('batch','LIKE',"%{$search}%" )
-                            ->orWhere('city','LIKE',"%{$search}%")->orderBy('first_name')->paginate(6);
-        //$alumni = User::where('batch', 'LIKE', $validated)->orderBy('first_name')->paginate(6);
 
-        return view('front.alumni-search', compact('alumni'));
+        $alumni = User::search($search)->orderBy('first_name')->paginate(10);
+
+        return view('front.alumni', compact('alumni'));
        
 
     }
