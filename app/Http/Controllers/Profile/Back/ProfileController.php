@@ -24,7 +24,7 @@ class ProfileController extends Controller
     }
 
     public function updateProfile(Request $request){
-      //  dd( $request->boolean('blood_donor'));
+      
 
           $request->validate([
             'first_name' =>'required|string',

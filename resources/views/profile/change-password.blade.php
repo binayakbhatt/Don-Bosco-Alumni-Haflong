@@ -19,13 +19,7 @@
                                 confirmPassword: false,
                                 showPassphrase: false,
                             }">
-                                {{-- <div class="mt-4">
-                                    <x-input-label for="passphrase" :value="__('Passphrase')" />
-
-                                    <x-text-input id="passphrase" class="block mt-1 w-full" type="password"
-                                        name="passphrase" :value="old('passphrase')" required />
-                                    <x-input-error :messages="$errors->get('passphrase')" class="mt-2" />
-                                </div> --}}
+                               
 
                                 <!--Passphrase-->
                                 <div class="mt-4">

@@ -3,9 +3,11 @@
     <div class=" bg-gradient-to-t from-pink-500 via-red-500 to-blue-500">
 
 
-        <div
+        {{-- <div
             class="container py-16 px-3 mx-auto flex flex-wrap flex-col-1 md:flex-row items-center text-white leading-normal tracking-normal">
             <!--Left Col-->
+
+
             <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left py-16">
                 <p class="mx-3 my-2 text-4xl font-bold leading-tight w-full"> Don Bosco School Haflong</p>
                 <h1 class="mx-3 my-2 text-3xl font-bold leading-tight w-full">
@@ -23,8 +25,51 @@
             <div class="w-full md:w-3/5 py-6 text-center">
                 <img class="w-full md:w-4/5 z-50" src="{{ asset('images/misc/hero.png') }}" />
             </div>
-        </div>
+        </div> --}}
 
+
+        <section>
+            <div class="py-24 px-4 mx-auto max-w-7xl sm:px-6 md:px-16 lg:px-24 lg:py-24 ">
+                <div class="flex flex-wrap items-center mx-auto max-w-7xl">
+                    <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
+                        <div>
+                            <div class="relative w-full max-w-lg">
+                                <div
+                                    class="absolute top-0 rounded-full bg-violet-300 -left-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob">
+                                </div>
+
+                                <div
+                                    class="absolute rounded-full bg-fuchsia-300 -bottom-24 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000">
+                                </div>
+                                <div class="relative">
+                                    <img class="object-cover object-center mx-auto rounded-lg shadow-2xl" alt="hero"
+                                        src="{{ asset('images/misc/pic.jpg') }}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col items-start mt-12 mb-16 text-left lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
+                        <span class="mb-8 text-xs font-bold tracking-widest text-white uppercase"> Ever Greater Ever
+                            Brighter
+                        </span>
+                        <h1
+                            class=" mb-8 text-4xl font-bold leading-none tracking-tighter text-white md:text-7xl lg:text-5xl ">
+                            Don Bosco Alumni Association, Haflong.</h1>
+                        <p class="mb-8 text-base leading-relaxed text-left text-white"> A platform to connect all Alumni
+                            of Don Bosco High School, Haflong. Read the story to know more ...</p>
+                        <div class="mt-0 lg:mt-6 max-w-7xl sm:flex">
+                            <div class="mt-3 rounded-lg sm:mt-0">
+                                <button
+                                    class="items-center block px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                    The Story</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="border-b py-8">
             <!--Event-->

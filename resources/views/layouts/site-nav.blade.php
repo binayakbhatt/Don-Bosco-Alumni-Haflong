@@ -17,8 +17,9 @@
             transition-all
             duration-200
             h-16
+            z-10
          "
-        :class="{ 'h-16': !scrolledFromTop, 'h-14': scrolledFromTop }">
+        :class="{ 'h-16': !scrolledFromTop, 'h-14  bg-opacity-80': scrolledFromTop }">
         <a href="/">
             <img src="{{ asset('images/misc/logo.png') }}" alt="Logo"
                 class="h-12 transform origin-left transition duration-200 py-2"
@@ -33,7 +34,7 @@
 
             </button>
             <ul class="
-                  fixed
+                 fixed
                   left-0
                   right-0
                   bg-blue-500
@@ -51,7 +52,7 @@
                   translate-x-full
                   md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0
                "
-                :class="{ 'translate-x-full': !navOpen }" :class="{ 'translate-x-0': navOpen }">
+                :class="{ 'translate-x-full': !navOpen }" :class="{ 'translate-x-0  ': navOpen }">
                 <li class="flex items-center hover:text-blue-700">
                     <a href="/" @click="navOpen = false">Home</a>
                 </li>
@@ -78,7 +79,7 @@
                         <a href="{{ route('dashboard') }}" @click="navOpen = false">Dashboard</a>
                     </li>
                     @if (auth()->user()->profile_picture)
-                        <li class="hidden md:flex md:items-center">
+                        <li class="hidden md:flex md:items-center hover:scale-110">
                             <img class="w-8 h-8 rounded"
                                 src="{{ asset('images/profile/' . auth()->user()->profile_picture) }}">
                         </li>

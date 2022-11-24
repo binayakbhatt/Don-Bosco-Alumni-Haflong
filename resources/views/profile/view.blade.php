@@ -8,8 +8,8 @@
                 </div>
                 <div class="flex  items-center justify-center mx-auto space-x-2 py-4">
                     @if (auth()->user()->profile_picture)
-                        <div class="image overflow-hidden">
-                            <img class=" h-56 w-56 mx-auto rounded-xl shadow-xl border-4 border-orange-400"
+                        <div class="image overflow-hidden hover:scale-105">
+                            <img class=" h-56 w-56 mx-auto rounded-xl shadow-xl border-4 border-grey-400  hover:cursor-none"
                                 src="{{ asset('images/profile/' . auth()->user()->profile_picture) }}">
                         </div>
                     @else
