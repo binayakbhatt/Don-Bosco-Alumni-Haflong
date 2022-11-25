@@ -4,7 +4,7 @@
         <div class="container py-16 px-3 w-full mx-auto items-center leading-normal tracking-normal">
             <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1  gap-6 mt-6">
 
-                <form action="{{ route('alumni-search') }}" method="GET">
+                <form action="{{ route('user-search') }}" method="GET">
                     @csrf
                     @method('GET')
                     <label for="default-search"
