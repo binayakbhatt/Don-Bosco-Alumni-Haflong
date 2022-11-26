@@ -139,7 +139,6 @@ class ProfileController extends Controller
             $image = $request->file('profile_picture');
             $extension = $image->extension();
             $profile_picture_name = date('dmYHis').'.'.$extension;
-           // $resize= Image::make($image)->resize(224,224)->
             $resize= Image::make($image)->resize(224,224);
             $final_image= $resize->insert('images/misc/watermark.png','bottom-right', 30, 10);
             $final_image->save('images/profile/'.$profile_picture_name);

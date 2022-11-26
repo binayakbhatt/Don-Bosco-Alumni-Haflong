@@ -17,25 +17,25 @@
                             class="block  max-w-sm p-6 bg-white border border-gray-200 
                             rounded-lg shadow-lg hover:bg-gray-100 hover:scale-105">
                             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-500 text-center">Alumni</h5>
-                            <p class="font-normal text-blue-700 text-8xl text-center">{{ $alumni }}</p>
+                            <p class="font-normal text-blue-700 text-md md:text-6xl text-center">{{ $alumni }}</p>
                         </a>
-                        <a href="#"
-                            class="block  max-w-sm p-6 bg-white border border-gray-200 
+                        <a href="{{ route('news.index') }}"
+                            class="block max-w-sm p-6 bg-white border border-gray-200 
                              rounded-lg shadow-lg hover:bg-gray-100 hover:scale-105">
                             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-500 text-center">News</h5>
-                            <p class="font-normal text-blue-700 text-8xl text-center">15</p>
+                            <p class="font-normal text-blue-700 text-md md:text-6xl text-center">{{ $news }}</p>
                         </a>
                         <a href="#"
                             class="block  max-w-sm p-6 bg-white border border-gray-200 
                              rounded-lg shadow-lg hover:bg-gray-100 hover:scale-105">
                             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-500 text-center">Event</h5>
-                            <p class="font-normal text-blue-700 text-8xl text-center">2</p>
+                            <p class="font-normal text-blue-700 text-md md:text-6xl text-center">2</p>
                         </a>
                         <a href="#"
-                            class="block  max-w-sm p-6 bg-white border border-gray-200 
+                            class="block   max-w-sm p-6 bg-white border border-gray-200 
                              rounded-lg shadow-lg hover:bg-gray-100 hover:scale-105">
                             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-500 text-center">Blog</h5>
-                            <p class="font-normal text-blue-700 text-8xl text-center">18</p>
+                            <p class="font-normal text-blue-700 text-md md:text-6xl text-center">180</p>
                         </a>
                     </div>
                 </div>
