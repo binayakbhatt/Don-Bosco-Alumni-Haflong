@@ -58,7 +58,9 @@
                                         </div>
                                     </th>
                                     <th scope="col" class="py-3 px-6">
-                                        Action
+                                        <div class="flex items-center justify-center">
+                                            Action
+                                        </div>
                                     </th>
                                 </tr>
                             </thead>
@@ -103,9 +105,17 @@
                                             </div>
                                         </td>
                                         <td class="py-4 px-6">
-                                            <a href="#"
-                                                class="font-medium text-blue-600 dark:text-red-500 hover:underline">Delete
-                                                User</a>
+                                            <div class="flex items-center justify-center">
+                                                <form action="{{ route('user.delete', $user->id) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button
+                                                        class=" bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded shadow-lg"
+                                                        type="submit"
+                                                        onclick="return confirm('This action will delete the User')">
+                                                        Delete User </button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -119,6 +129,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 

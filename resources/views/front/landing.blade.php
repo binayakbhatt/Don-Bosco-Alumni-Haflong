@@ -1,32 +1,7 @@
 <x-front-layout>
 
     <div class=" bg-gradient-to-t from-pink-500 via-red-500 to-blue-500">
-
-
-        {{-- <div
-            class="container py-16 px-3 mx-auto flex flex-wrap flex-col-1 md:flex-row items-center text-white leading-normal tracking-normal">
-            <!--Left Col-->
-
-
-            <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left py-16">
-                <p class="mx-3 my-2 text-4xl font-bold leading-tight w-full"> Don Bosco School Haflong</p>
-                <h1 class="mx-3 my-2 text-3xl font-bold leading-tight w-full">
-                    Alumni Association
-                </h1>
-                <p class="mx-3 my-2 leading-normal text-xl mb-8">
-                    A platform to connect all Alumni of Don Bosco High School, Haflong
-                </p>
-                <a class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none"
-                    href="">
-                    Know more
-                </a>
-            </div>
-            <!--Right Col-->
-            <div class="w-full md:w-3/5 py-6 text-center">
-                <img class="w-full md:w-4/5 z-50" src="{{ asset('images/misc/hero.png') }}" />
-            </div>
-        </div> --}}
-
+    
 
         <section>
             <div class="py-24 px-4 mx-auto max-w-7xl sm:px-6 md:px-16 lg:px-24 lg:py-24 ">

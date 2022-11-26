@@ -21,4 +21,11 @@ class RegisteredUserController extends Controller
 
         return view('user.index', compact('users'));
     }
+
+    public function delete($id){
+
+        $user = User::findorFail($id);
+        $user->delete();
+        return back();
+    }
 }
