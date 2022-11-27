@@ -34,13 +34,7 @@ class AppServiceProvider extends ServiceProvider
             return request()->user()?->can('admin');
         });
 
-        Gate::define('editor', function(User $user){
-            return $user->role === 'Editor';
-        });
         
-        Blade::if('editor', function () {
-            return request()->user()?->can('editor');
-        });
 
     }
 }

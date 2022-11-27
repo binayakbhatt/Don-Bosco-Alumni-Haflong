@@ -59,25 +59,21 @@
                 <li class="flex items-center hover:text-blue-700">
                     <a href="{{ route('front.news') }}" @click="navOpen = false">News</a>
                 </li>
-                <li class="flex items-center hover:text-blue-700">
-                    <a href="" @click="navOpen = false">Event</a>
-                </li>
-                <li class="flex items-center hover:text-blue-700">
-                    <a href="" @click="navOpen = false">Blog</a>
-                </li>
+
+
                 <li class="flex items-center hover:text-blue-700">
                     <a href="{{ route('alumni') }}" @click="navOpen = false">Alumni</a>
                 </li>
-                <li class="flex items-center hover:text-blue-700">
-                    <a href="" @click="navOpen = false">Contact</a>
-                </li>
+
                 @if (Auth::check())
                     <li class="flex items-center hover:text-blue-700">
                         <a href="{{ route('profile.view') }}" @click="navOpen = false">Profile</a>
                     </li>
-                    <li class="flex items-center hover:text-blue-700">
-                        <a href="{{ route('dashboard') }}" @click="navOpen = false">Dashboard</a>
-                    </li>
+                    @admin
+                        <li class="flex items-center hover:text-blue-700">
+                            <a href="{{ route('dashboard') }}" @click="navOpen = false">Dashboard</a>
+                        </li>
+                    @endadmin
                     @if (auth()->user()->profile_picture)
                         <li class="hidden md:flex md:items-center hover:scale-110">
                             <img class="w-8 h-8 rounded"

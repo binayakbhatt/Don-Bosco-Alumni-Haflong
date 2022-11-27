@@ -37,6 +37,13 @@
                             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-500 text-center">Blog</h5>
                             <p class="font-normal text-blue-700 text-md md:text-6xl text-center">180</p>
                         </a>
+                        <a href="#"
+                            class="block   max-w-sm p-6 bg-white border border-gray-200 
+                             rounded-lg shadow-lg hover:bg-gray-100 hover:scale-105">
+                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-500 text-center">Categories</h5>
+                            <p class="font-normal text-blue-700 text-md md:text-6xl text-center">5</p>
+                        </a>
+
                     </div>
                 </div>
             </div>

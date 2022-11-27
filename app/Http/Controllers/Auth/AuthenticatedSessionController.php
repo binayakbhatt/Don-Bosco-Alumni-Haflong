@@ -32,7 +32,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        if($request->email =='admin@test.com') {
+        if($request->email =='dbhsalumnihaflong@gmail.com') {
              return redirect()->intended(RouteServiceProvider::ADMIN_HOME);
         }
 

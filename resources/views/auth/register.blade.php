@@ -72,9 +72,19 @@
                 <!-- Blood Group-->
                 <div class="mt-4">
                     <x-input-label for="blood_group" :value="__('Blood Group')" />
+                    <x-input-select id="blood_group" class="block mt-1 w-full" name="blood_group" required>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                    </x-input-select>
 
-                    <x-text-input id="blood_group" class="block mt-1 w-full" type="text" name="blood_group"
-                        :value="old('blood_group')" required />
+                    {{-- <x-text-input id="blood_group" class="block mt-1 w-full" type="text" name="blood_group"
+                        :value="old('blood_group')" required /> --}}
 
                     <x-input-error :messages="$errors->get('blood_group')" class="mt-2" />
                 </div>

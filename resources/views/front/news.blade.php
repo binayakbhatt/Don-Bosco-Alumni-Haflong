@@ -6,10 +6,10 @@
 
                 <div class="space-x-2 p-4">
                     @foreach ($news as $article)
-                        <div class="max-w-full bg-white border border-gray-200 rounded-lg shadow-md mb-4">
+                        <div class="max-w-full bg-white border border-gray-200 rounded-lg shadow-md p-4 mb-4">
 
                             <div class="p-5">
-                                <div href="#">
+                                <div>
                                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-indigo-900 ">
                                         {{ $article->headline }}</h5>
                                 </div>
@@ -17,7 +17,7 @@
                                     {{ Str::substr($article->body, 0, 300) }}
                                 </p>
                                 <a href="{{ route('news-detail', $article->slug) }}"
-                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center 
+                                    class="inline-flex items-center justify-end px-3 py-2 text-sm font-medium text-center 
                                     text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     Read more
                                     <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor"

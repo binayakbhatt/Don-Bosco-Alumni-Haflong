@@ -19,3 +19,5 @@ Route::get('/search',[ProfileController::class,'searchByBatch'])->name('alumni-s
 //News
 Route::get('/newslist',[NewsController::class, 'news_list'] )->name('front.news');
 Route::get('/news-detail/{id}',[NewsController::class,'news_detail'])->name('news-detail');
+
+

@@ -46,7 +46,7 @@
             </div>
         </section>
 
-        <section class="border-b py-8">
+        {{-- <section class="border-b py-8">
             <!--Event-->
             <div class="md:flex bg-gray-100 rounded-xl p-4 md:p-4 shadow-lg border border-blue-200 m-4">
 
@@ -145,7 +145,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <div class="relative -mt-12 lg:-mt-24">
             <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
