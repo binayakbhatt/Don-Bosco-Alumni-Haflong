@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\News\Front\NewsController;
 use App\Http\Controllers\Profile\Front\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,3 +15,7 @@ Route::get('/alumni-detail/{id}',[ProfileController::class,'alumni_detail'])->na
 
 //search
 Route::get('/search',[ProfileController::class,'searchByBatch'])->name('alumni-search');
+
+//News
+Route::get('/newslist',[NewsController::class, 'news_list'] )->name('front.news');
+Route::get('/news-detail/{id}',[NewsController::class,'news_detail'])->name('news-detail');

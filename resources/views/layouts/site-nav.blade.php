@@ -57,7 +57,7 @@
                     <a href="/" @click="navOpen = false">Home</a>
                 </li>
                 <li class="flex items-center hover:text-blue-700">
-                    <a href="" @click="navOpen = false">News</a>
+                    <a href="{{ route('front.news') }}" @click="navOpen = false">News</a>
                 </li>
                 <li class="flex items-center hover:text-blue-700">
                     <a href="" @click="navOpen = false">Event</a>
