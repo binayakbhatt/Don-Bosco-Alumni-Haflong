@@ -24,9 +24,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # install the libraries
 RUN composer install
 
-# execute
-#CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
-
 # generate key
 RUN touch database/database.sqlite && \
 	php artisan key:generate && \
@@ -34,5 +31,6 @@ RUN touch database/database.sqlite && \
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 8000
+
 #CMD ["php-fpm"]
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]

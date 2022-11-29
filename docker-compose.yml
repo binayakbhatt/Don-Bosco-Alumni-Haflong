@@ -26,6 +26,22 @@ services:
     depends_on: 
       - webapp
     restart: always
+  db:
+    image: mysql:5.7.22
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - db_network
+    depends_on: 
+      - webapp
   #certbot:
   #  image: certbot/certbot:latest
   #  volumes:
