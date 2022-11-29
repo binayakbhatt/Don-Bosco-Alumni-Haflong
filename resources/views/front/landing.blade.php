@@ -1,7 +1,7 @@
 <x-front-layout>
 
     <div class=" bg-gradient-to-t from-pink-500 via-red-500 to-blue-500">
-    
+
 
         <section>
             <div class="py-24 px-4 mx-auto max-w-7xl sm:px-6 md:px-16 lg:px-24 lg:py-24 ">
@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="relative">
                                     <img class="object-cover object-center mx-auto rounded-lg shadow-2xl" alt="hero"
-                                        src="{{ asset('images/misc/pic.jpg') }}">
+                                        src="{{ asset('images/misc/5236.jpg') }}">
                                 </div>
                             </div>
                         </div>
