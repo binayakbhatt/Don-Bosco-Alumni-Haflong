@@ -10,22 +10,22 @@ services:
     networks:
       - db_network
       - web_network
-  nginx:
-    container_name: nginx
-    restart: always
-    image: "nginx:latest"
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./nginx:/etc/nginx/conf.d
-      #- ./certbot/www:/var/www/certbot/:ro
-      #- ./certbot/conf/:/etc/nginx/ssl/:ro
-    networks:
-      - web_network
-    depends_on: 
-      - webapp
-    restart: always
+  #nginx:
+    #  container_name: nginx
+    #  restart: always
+    #  image: "nginx:latest"
+    #  ports:
+    #    - "80:80"
+    #    - "443:443"
+    #  volumes:
+    #    - ./nginx:/etc/nginx/conf.d
+    #    #- ./certbot/www:/var/www/certbot/:ro
+    #    #- ./certbot/conf/:/etc/nginx/ssl/:ro
+    #  networks:
+    #    - web_network
+    #  #depends_on: 
+    #    #  - webapp
+    #  restart: always
   db:
     image: mysql:5.7.22
     container_name: db
@@ -34,14 +34,29 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: laravel
-      MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+      MYSQL_DATABASE: dbhs_alumni
+      MYSQL_ROOT_PASSWORD: password
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     networks:
       - db_network
-    depends_on: 
-      - webapp
+    #depends_on: 
+    #- webapp
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: pma
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+      MYSQL_ROOT_PASSWORD: password
+    restart: always
+    ports:
+      - 8081:8081
+    networks:
+      - db_network
   #certbot:
   #  image: certbot/certbot:latest
   #  volumes:
