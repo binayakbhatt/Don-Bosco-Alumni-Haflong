@@ -1,0 +1,69 @@
+version: '3.8'
+services:
+  webapp:
+    container_name: webapp
+    restart: always
+    #env_file: .env
+    build: .
+    volumes:
+      - ./database:/apps/database
+    networks:
+      - db_network
+      - web_network
+  #nginx:
+    #  container_name: nginx
+    #  restart: always
+    #  image: "nginx:latest"
+    #  ports:
+    #    - "80:80"
+    #    - "443:443"
+    #  volumes:
+    #    - ./nginx:/etc/nginx/conf.d
+    #    #- ./certbot/www:/var/www/certbot/:ro
+    #    #- ./certbot/conf/:/etc/nginx/ssl/:ro
+    #  networks:
+    #    - web_network
+    #  #depends_on: 
+    #    #  - webapp
+    #  restart: always
+  db:
+    image: mysql:5.7.22
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: dbhs_alumni
+      MYSQL_ROOT_PASSWORD: password
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - db_network
+    #depends_on: 
+    #- webapp
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: pma
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+      MYSQL_ROOT_PASSWORD: password
+    restart: always
+    ports:
+      - 8081:8081
+    networks:
+      - db_network
+  #certbot:
+  #  image: certbot/certbot:latest
+  #  volumes:
+  #    - ./certbot/www/:/var/www/certbot/:rw
+  #    - ./certbot/conf/:/etc/letsencrypt/:rw
+networks:
+  db_network:
+    driver: bridge
+  web_network:
+    driver: bridge

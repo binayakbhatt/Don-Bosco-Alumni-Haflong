@@ -1,0 +1,21 @@
+1. create ssh key and add to github
+
+ssh-keygen -t ed25519 -C "joydeepubuntu@gmail.com"
+
+   10  git config --global user.name "joydeep bhattacharjee"
+   11  git config --global user.email "joydeepubuntu@gmail.com"
+   12  git checkout -b docker
+   13  git pull origin master
+   14  sudo apt-get remove docker docker-engine docker.io containerd runc
+   15  sudo apt-get update
+   16  sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
+   17  sudo mkdir -p /etc/apt/keyrings
+   18  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+   19  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   20  sudo apt-get update
+   21  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+   22  sudo docker run hello-world
+
+
+
