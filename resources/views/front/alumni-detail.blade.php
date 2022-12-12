@@ -57,23 +57,23 @@
                         <div class="grid md:grid-cols-3 text-sm">
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">First Name</div>
-                                <div class="px-4 py-2">{{ $alumni_detail->first_name }}</div>
+                                <div class="px-4 py-2 break-words">{{ $alumni_detail->first_name }}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Middle Name</div>
-                                <div class="px-4 py-2">{{ $alumni_detail->middle_name }}</div>
+                                <div class="px-4 py-2 break-words">{{ $alumni_detail->middle_name }}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Last Name</div>
-                                <div class="px-4 py-2">{{ $alumni_detail->last_name }}</div>
+                                <div class="px-4 py-2 break-words">{{ $alumni_detail->last_name }}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Email</div>
-                                <div class="px-4 py-2">{{ $alumni_detail->email }}</div>
+                                <div class="px-4 py-2 break-words">{{ $alumni_detail->email }}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Contact No.</div>
-                                <div class="px-4 py-2">{{ $alumni_detail->phone }}</div>
+                                <div class="px-4 py-2 break-words">{{ $alumni_detail->phone }}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Birthday</div>
@@ -86,28 +86,28 @@
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Occupation</div>
-                                <div class="px-4 py-2">{{ $alumni_detail->occupation }}</div>
+                                <div class="px-4 py-2 break-words">{{ $alumni_detail->occupation }}</div>
                             </div>
 
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">City</div>
-                                <div class="px-4 py-2">{{ $alumni_detail->city }}</div>
+                                <div class="px-4 py-2 break-words">{{ $alumni_detail->city }}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">State</div>
-                                <div class="px-4 py-2">{{ $alumni_detail->state }}</div>
+                                <div class="px-4 py-2 break-words">{{ $alumni_detail->state }}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Country</div>
-                                <div class="px-4 py-2">{{ $alumni_detail->country }}</div>
+                                <div class="px-4 py-2 break-words">{{ $alumni_detail->country }}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Pin code</div>
-                                <div class="px-4 py-2">{{ $alumni_detail->pin_code }}</div>
+                                <div class="px-4 py-2 break-words">{{ $alumni_detail->pin_code }}</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Blood Group</div>
-                                <div class="px-4 py-2">{{ $alumni_detail->blood_group }}</div>
+                                <div class="px-4 py-2 break-words">{{ $alumni_detail->blood_group }}</div>
                             </div>
                         </div>
                     </div>

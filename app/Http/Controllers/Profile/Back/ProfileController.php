@@ -36,8 +36,8 @@ class ProfileController extends Controller
             'country'=>'string|nullable',
             'state' =>'string|nullable',
             'occupation'=>'string|nullable',
-            'blood_group'=>'required|string',
-            'blood_donor' =>'boolean',
+           // 'blood_group'=>'required|string',
+          //  'blood_donor' =>'boolean',
         ]);
 
         $blood_donor= $request->boolean('blood_donor');

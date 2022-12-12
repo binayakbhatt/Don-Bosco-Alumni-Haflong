@@ -25,6 +25,7 @@ class RegisteredUserController extends Controller
     public function delete($id){
 
         $user = User::findorFail($id);
+        unlink(public_path('images/profile/'.$user->profile_picture));
         $user->delete();
         return back();
     }

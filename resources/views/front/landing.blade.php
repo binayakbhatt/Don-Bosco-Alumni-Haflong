@@ -9,16 +9,10 @@
                     <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
                         <div>
                             <div class="relative w-full max-w-lg">
-                                <div
-                                    class="absolute top-0 rounded-full bg-violet-300 -left-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob">
-                                </div>
 
-                                <div
-                                    class="absolute rounded-full bg-fuchsia-300 -bottom-24 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000">
-                                </div>
                                 <div class="relative">
                                     <img class="object-cover object-center mx-auto rounded-lg shadow-2xl" alt="hero"
-                                        src="{{ asset('images/misc/5236.jpg') }}">
+                                        src="{{ asset('images/misc/5235.jpg') }}">
                                 </div>
                             </div>
                         </div>
@@ -31,13 +25,19 @@
                         <h1
                             class=" mb-8 text-4xl font-bold leading-none tracking-tighter text-white md:text-7xl lg:text-5xl ">
                             Don Bosco Alumni Association, Haflong.</h1>
-                        <p class="mb-8 text-base leading-relaxed text-left text-white"> A platform to connect all Alumni
-                            of Don Bosco High School, Haflong. Read the story to know more ...</p>
+                        <p class="mb-8 text-base leading-relaxed text-left text-white">Dear Students of Don Bosco
+                            School, Haflong</p>
+                        <p class="mb-8 text-base leading-relaxed text-left text-white text-justify">This is a unique
+                            opprtunity for
+                            you to connect with all the alumni of our school. Through this platform you can interact
+                            with the alumni and seek guidance from them. The alumni inturn can also share their
+                            experience with the upcoming generation of Bosconians and help them in their future
+                            endeavours.</p>
                         <div class="mt-0 lg:mt-6 max-w-7xl sm:flex">
                             <div class="mt-3 rounded-lg sm:mt-0">
-                                <button
+                                <a href="{{ route('alumni') }}"
                                     class="items-center block px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                                    The Story</button>
+                                    Alumni</a>
                             </div>
 
                         </div>
