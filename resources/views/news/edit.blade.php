@@ -9,7 +9,8 @@
 
                         <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Edit News
                         </h3>
-                        <x-form action="{{ route('news.update', $news_single->id) }}" method="POST" has-files>
+                        <form action="{{ route('news.update', $news_single->id) }}" method="POST"
+                            enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 
@@ -63,7 +64,7 @@
                                     Save </button>
                             </div>
 
-                        </x-form>
+                        </form>
 
                     </div>
                 </div>

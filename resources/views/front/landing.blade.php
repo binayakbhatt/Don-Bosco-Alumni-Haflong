@@ -27,7 +27,7 @@
                             Don Bosco Alumni Association, Haflong.</h1>
                         <p class="mb-8 text-base leading-relaxed text-left text-white">Dear Students of Don Bosco
                             School, Haflong</p>
-                        <p class="mb-8 text-base leading-relaxed text-left text-white text-justify">This is a unique
+                        <p class="mb-8 text-base leading-relaxed text-white text-justify">This is a unique
                             opprtunity for
                             you to connect with all the alumni of our school. Through this platform you can interact
                             with the alumni and seek guidance from them. The alumni inturn can also share their

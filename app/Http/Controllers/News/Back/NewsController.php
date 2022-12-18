@@ -110,42 +110,43 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    // public function update(Request $request, $id)
+    // {
 
-        $news = News::findorFail($id);
-         $request->validate(
-            [
-            'date' => 'required|date',
-            'headline' => 'required|max:255',
-            'body' => 'required',
-            'image'=>'image|mimes:png,jpg|max:2048',
-            ]
-        );
+    //     $news = News::findorFail($id);
+    //      $request->validate(
+    //         [
+    //         'date' => 'required|date',
+    //         'headline' => 'required|max:255',
+    //         'body' => 'required',
+    //         'image'=>'image|mimes:png,jpg|max:2048',
+    //         ]
+    //     );
 
 
-        if($request->hasFile('image')){
+    //     if($request->hasFile('image')){
             
-            if(file_exists(public_path('images/news/'.$news->image_link)) AND !empty($news->image_link)){
+    //         if(file_exists(public_path('images/news/'.$news->image_link)) AND !empty($news->image_link)){
 
-            unlink(public_path('images/news/'.$news->image_link));
-        }
-            $image = $request->file('image');
-            $extension = $image->extension();
-            $image_name = date('dmYHis').'.'.$extension;
-            $final_image= Image::make($image)->resize(640,480);
-            $final_image->save('images/news/'.$image_name);
-        }
-        $news->date = $request->date;
-        $news->headline = $request->headline;
-        $news->slug = Str::slug($news->headline, '-');
-        $news->body = $request->body;
-        $news->image_link =$image_name;
-        $news->update();
-        return redirect()->route('news.index')->with('success', 'News updated Successfully');
+    //         unlink(public_path('images/news/'.$news->image_link));
+            
+    //     }
+    //        $image = $request->file('image');
+    //         $extension = $image->extension();
+    //         $image_name = date('dmYHis').'.'.$extension;
+    //         $final_image= Image::make($image)->resize(640,480);
+    //         $final_image->save('images/news/'.$image_name);
+    //     }
+    //     $news->date = $request->date;
+    //     $news->headline = $request->headline;
+    //     $news->slug = Str::slug($news->headline, '-');
+    //     $news->body = $request->body;
+    //     $news->image_link =$image_name;
+    //     $news->update();
+    //     return redirect()->route('news.index')->with('success', 'News updated Successfully');
 
         
-    }
+    // }
 
     /**
      * Remove the specified resource from storage.

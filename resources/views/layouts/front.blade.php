@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
-    <title>{{  config('app.name', 'Don Bosco Alumni') }}</title>
+    <title>{{ config('app.name', 'Don Bosco Alumni') }}</title>
 
 
     <!-- Fonts -->
@@ -37,74 +37,9 @@
                             Don Bosco Alumni, Haflong
                         </a>
                     </div>
-                    <div class="flex-1">
-                        <p class="uppercase text-gray-500 md:mb-6">Links</p>
-                        <ul class="list-reset mb-6">
-                            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                    class="no-underline hover:underline text-gray-800 hover:text-pink-500">News</a>
-                            </li>
-                            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                    class="no-underline hover:underline text-gray-800 hover:text-pink-500">Event</a>
-                            </li>
-                            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                    class="no-underline hover:underline text-gray-800 hover:text-pink-500">Blog</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex-1">
-                        <p class="uppercase text-gray-500 md:mb-6">Legal</p>
-                        <ul class="list-reset mb-6">
-                            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                    class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
-                            </li>
-                            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                    class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex-1">
-                        <p class="uppercase text-gray-500 md:mb-6">Social</p>
-                        <ul class="list-reset mb-6">
-                            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                    class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
-                            </li>
-                            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                    class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
-                            </li>
-                            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                    class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex-1">
-                        <p class="uppercase text-gray-500 md:mb-6">Organisation</p>
-                        <ul class="list-reset mb-6">
-                            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                    class="no-underline hover:underline text-gray-800 hover:text-pink-500">
-                                    Blog</a>
-                            </li>
-                            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                    class="no-underline hover:underline text-gray-800 hover:text-pink-500">The Team</a>
-                            </li>
-                            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                <a href="#"
-                                    class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
-            <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Website created by
+            <a href="#" class="flex items-center justify-end text-gray-500 px-5">Website created by
                 2005 Batch</a>
         </footer>
         <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg"
